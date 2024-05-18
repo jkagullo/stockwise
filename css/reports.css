@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-color: #e1e1e1;
+    color: #1f1f1f;
+}
+
+.title{
+    font-size: 36px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+    width: 30%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.buttons a{
+    display: block;
+}
+
+.forms, .reports{
+    height: 100%;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    width: 100px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #1f1f1f;
+    color: #e1e1e1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.container{
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #1f1f1f;
+    height: 70vh;
+    color: #e1e1e1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+}
+
+.left-container{
+    width: 30%;
+    height: 100%;
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container{
+    width: 70%;
+    height: 100%;
+    background-color: #1f1f1f;
+    border: 1px solid #e1e1e1;
+    overflow-y: auto;
+}
+.header{
+    font-size: 24px;
+}
+
+select{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td{
+    border: 1px solid #e1e1e1;
+}
+
+th, td{
+    padding: 8px;
+    text-align: left;
+}
+
