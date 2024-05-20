@@ -49,6 +49,7 @@
     <div class="container">
         <div class="card">
             <p class="header">Add Category</p>
+            <a href="forms.php"><button class="back">Back</button></a>
             <form action="category.php" method="post">
                 <p>Note: Category ID will be auto-generated</p><br>
                 <?php

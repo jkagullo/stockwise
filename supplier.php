@@ -51,6 +51,7 @@
     <div class="container">
         <div class="card">
             <p class="header">Add Supplier</p>
+            <a href="forms.php"><button class="back">Back</button></a>
             <form action="supplier.php" method="post">
                 <p>Note: Supplier ID will be auto-generated</p><br>
                 <?php
