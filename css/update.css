@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e1e1e1;
+    color: #1f1f1f;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buttons {
+    width: 30%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.buttons a {
+    display: block;
+}
+
+.forms, .reports {
+    height: 100%;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    width: 100px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #1f1f1f;
+    color: #e1e1e1;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.forms:hover, .reports:hover {
+    background-color: #333;
+}
+
+.container {
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    height: auto;
+    color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .header {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input[type="text"], form input[type="number"], form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus, form input[type="number"]:focus, form select:focus {
+    border-color: #1f1f1f;
+}
+
+.card-button {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+    color: #e1e1e1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #333;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+.back{
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    width: 100px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: #ddd;
+}
