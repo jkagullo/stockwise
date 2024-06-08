@@ -8,27 +8,52 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        // Check if the user exists in the database
-        $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
-        $stmt->bind_param("ss", $username, $password);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        // Check if the username is 'admin' and password is 'admin123'
+        if ($username === 'admin' && $password === 'admin123') {
+            // Check if admin credentials exist in the database
+            $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+            $stmt->bind_param("ss", $username, $password);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
-        if ($result->num_rows > 0) {
-            // User exists, fetch user data
-            $user = $result->fetch_assoc();
-            
-            // Store user ID in session
-            $_SESSION['user_id'] = $user['user_id'];
+            if ($result->num_rows > 0) {
+                // Admin exists, fetch admin data
+                $user = $result->fetch_assoc();
 
-            // Redirect to shop.php
-            header("Location: shop.php");
-            exit(); // Terminate script after redirection
+                // Store user ID in session
+                $_SESSION['user_id'] = $user['user_id'];
+
+                // Redirect to forms.php for admin user
+                header("Location: admin.php");
+                exit(); // Terminate script after redirection
+            } else {
+                $error_message = "Invalid username or password.";
+            }
+
+            $stmt->close();
         } else {
-            $error_message = "Invalid username or password.";
-        }
+            // Check if the user exists in the database for regular users
+            $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+            $stmt->bind_param("ss", $username, $password);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
-        $stmt->close();
+            if ($result->num_rows > 0) {
+                // User exists, fetch user data
+                $user = $result->fetch_assoc();
+                
+                // Store user ID in session
+                $_SESSION['user_id'] = $user['user_id'];
+
+                // Redirect to shop.php for regular users
+                header("Location: shop.php");
+                exit(); // Terminate script after redirection
+            } else {
+                $error_message = "Invalid username or password.";
+            }
+
+            $stmt->close();
+        }
     } elseif (isset($_POST['signup'])) {
         // Redirect to signup page
         header("Location: signup.php");

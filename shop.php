@@ -61,8 +61,8 @@ if ($result->num_rows > 0) {
             <div class="logo">
                 <h1>SpeedOne</h1>
             </div>
-            <p>Shop</p>
-            <p>Purchased</p>
+            <p><a href="shop.php">Shop</a></p>
+            <p><a href="purchased.php">Purchased</a></p>
             <p><a href="index.php">Logout</a></p>
         </nav>
     </header>
@@ -95,7 +95,7 @@ if ($result->num_rows > 0) {
         <?php
         // Check if an order was successfully placed and display the Snackbar
         if (isset($_SESSION['order_placed']) && $_SESSION['order_placed'] === true) {
-            echo "<div id='snackbar'>Order placed successfully!</div>";
+            echo "<div id='snackbar' class='show'>Order placed successfully!</div>";
             // Reset the session variable
             $_SESSION['order_placed'] = false;
         }
@@ -103,10 +103,12 @@ if ($result->num_rows > 0) {
     </main>
 </body>
 <script>
-    // Check if the snackbar element exists and if the "show" class is applied to it
+    // Check if the snackbar element exists and show it with the "show" class
     document.addEventListener("DOMContentLoaded", function() {
         var snackbar = document.getElementById("snackbar");
-        if (snackbar && snackbar.classList.contains("show")) {
+        if (snackbar) {
+            // Add the "show" class to display the snackbar
+            snackbar.classList.add("show");
             // Hide the snackbar after 3 seconds
             setTimeout(function() {
                 snackbar.classList.remove("show");
@@ -114,6 +116,5 @@ if ($result->num_rows > 0) {
         }
     });
 </script>
-
 
 </html>

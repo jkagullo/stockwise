@@ -15,6 +15,10 @@ header {
     align-items: center;
 }
 
+body{
+    background-color: #212121;
+}
+
 nav {
     width: 80%;
     height: 100%;
@@ -38,6 +42,14 @@ nav p:hover {
 main {
     width: 100%;
     background-color: #212121;
+    height: 100vh;
+}
+
+.greet{
+    color: #e1e1e1;
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .container {
@@ -47,6 +59,9 @@ main {
     padding-top: 5vh;
     background-color: #333;
     padding: 50px;
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 a {
@@ -68,6 +83,7 @@ a:hover{
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 th, td {
@@ -77,6 +93,7 @@ th, td {
 
 th {
     background-color: #444;
+    text-align: left;
 }
 
 tr:nth-child(even) {
@@ -108,6 +125,19 @@ button:hover{
     transition: 0.2s ease-in;
 }
 
+
+
+.card{
+    width: 20%;
+    height: auto;
+    border: 1px solid white;
+}
+
+
+
+
+
+/* snackbar */
 #snackbar {
     visibility: hidden;
     min-width: 250px;
