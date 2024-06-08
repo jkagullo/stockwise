@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 30%;
+    height: auto;
+    background-color: #212121;
+    color: #e1e1e1;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.card {
+    width: 100%;
+    padding: 10px;
+}
+
+.card1 .title {
+    color: #e1e1e1;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.card1 .description {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.username-label, .password-label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red; /* Change to a visible color */
+}
+
+.input-container input {
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333; 
+    color: #e1e1e1;
+    font-weight: 500;
+}
+
+.card3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.buttons{
+    height: 30px;
+    background-color: #333;
+    color: #e1e1e1;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.buttons.button3 {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+}
+
+.card3 a{
+    text-decoration: none;
+}
+
+
+.buttons:hover{
+    color: #333;
+    background-color: #e1e1e1;
+    transition: 0.5s ease-in;
+}
+
+ /* CSS for snackbar */
+ .snackbar {
+    visibility: hidden; /* Hidden by default */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on the button (works with JavaScript too) */
+.show {
+    visibility: visible; /* Show the snackbar */
+    animation: fadein 0.5s, fadeout 0.5s 2.5s; /* Fade in and out */
+}
+
+/* Animations to fade the snackbar in and out */
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
