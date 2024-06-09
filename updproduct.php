@@ -69,7 +69,7 @@
                 <button type="submit" name="search_product" class="card-button">Search Product ID</button>
             </form>
             <?php if ($product): ?>
-                <form action"updproduct.php" method="post">
+                <form action="updproduct.php" method="post">
                     <input type="hidden" name="product_id" value="<?php echo $product['ProductID']; ?>">
                     <label for="product_name">Product Name:</label>
                     <input type="text" id="product_name" name="product_name" value="<?php echo $product['ProductName']; ?>" required><br>

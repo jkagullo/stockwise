@@ -45,6 +45,7 @@ $total_customers = $customer_data['total_customers'];
 
 $conn->close();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
